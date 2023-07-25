@@ -1,0 +1,23 @@
+public class Manager extends Employee {
+
+    String company;
+
+    Manager(String name) {
+        // required calling one of parent constructor
+        super(name);
+    }
+
+    Manager(String name, String company) {
+        super(name);
+        this.company = company;
+    }
+    void sayHello(String name) {
+        System.out.println("Hello " + name + ", My Name is Manager " + this.name);
+    }
+}
+
+/*
+    class VicePresident extends Manager {
+
+    }
+*/
