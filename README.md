@@ -12,34 +12,34 @@ Progress: To Do, On Progress, Done
 
 # ---- JAVA Topic / Subject ----: - Progress ------------#
 # -------------------------------------------------------#
-#  1. Dasar                     : To Do        : 61 chap #
+#  1. Dasar                     : To Do        : 32 chap #
 #  2. Studi Kasus Dasar:
-#       App Todolist            : To Do        :  8 chap #
-#  3. OOP                       : To Do        : 16 chap #
-#  4. Standard Classes          : To Do        : 28 chap #
+#       App Todolist            : To Do        : 23 chap #
+#  3. OOP                       : To Do        : 44 chap #
+#  4. Standard Classes          : To Do        : xx chap #
 #  5. Studi Kasus OOP:                                   #
-#       App Todolist            : To Do        :  9 chap #
-#  6. Generic                   : To Do        : 15 chap #
-#  7. Collection                : To Do        :  8 chap #
-#  8. Lambda                    : To Do        : 29 chap #
-#  9. Apache Maven              : To Do        : 11 chap #
-# 10. Unit Test                 : To Do        : 11 chap #
-# 11. Stream                    : To Do        : 11 chap #
-# 12. Database                  : To Do        : 11 chap #
+#       App Todolist            : To Do        : xx chap #
+#  6. Generic                   : To Do        : xx chap #
+#  7. Collection                : To Do        : xx chap #
+#  8. Lambda                    : To Do        : xx chap #
+#  9. Apache Maven              : To Do        : xx chap #
+# 10. Unit Test                 : To Do        : xx chap #
+# 11. Stream                    : To Do        : xx chap #
+# 12. Database                  : To Do        : xx chap #
 # 13. Studi Kasus Database:                              #
-#       App Todolist            : To Do        : 11 chap #
-# 14. Internationalization      : To Do        : 11 chap #
-# 15. Date & Time               : To Do        : 11 chap #
-# 16. Thread                    : To Do        : 11 chap #
-# 17. Reflection                : To Do        : 11 chap #
-# 18. Validation                : To Do        : 11 chap #
-# 19. Logging                   : To Do        : 11 chap #
-# 20. Lombok                    : To Do        : 11 chap #
-# 21. Resilience 4J             : To Do        : 11 chap #
-# 22. Input Output              : To Do        : 11 chap #
-# 23. JSON                      : To Do        : 11 chap #
-# 24. CSV                       : To Do        : 11 chap #
-# 25. Web Servlet               : To Do        : 11 chap #
+#       App Todolist            : To Do        : xx chap #
+# 14. Internationalization      : To Do        : xx chap #
+# 15. Date & Time               : To Do        : xx chap #
+# 16. Thread                    : To Do        : xx chap #
+# 17. Reflection                : To Do        : xx chap #
+# 18. Validation                : To Do        : xx chap #
+# 19. Logging                   : To Do        : xx chap #
+# 20. Lombok                    : To Do        : xx chap #
+# 21. Resilience 4J             : To Do        : xx chap #
+# 22. Input Output              : To Do        : xx chap #
+# 23. JSON                      : To Do        : xx chap #
+# 24. CSV                       : To Do        : xx chap #
+# 25. Web Servlet               : To Do        : xx chap #
 #     GRaphQL                   : To Do                  #
 # -------------------------------------------------------#
 
