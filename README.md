@@ -2,35 +2,11 @@
 ### Running app
 
 # Install Dependency
-- install all dependencies:
-    go get .
-
-- install all dependencies recursively:
-    go get ./...
-    go get -d ./...
-
-... is a special pattern, tells to go down recursively.
-
-- compile file -> generate binary file
-go build filename
-
-- run app
-./filename
 
 # Run on Dev env
-go run filename
 
-# Error not in GOROOT
-old GOPATH, new Go Modules
-- activate old GOPATH
-go env -w GO111MODULE=off
-
-- activate Go Modules
-go env -w GO111MODULE=on
 
 # Notes
-- data type 32 -> 8
-127 to -128
 
 Progress: To Do, On Progress, Done
 
@@ -585,21 +561,8 @@ ex: UI/UX
 - Stream
 
 ### Noted Feature:
-
 - 
 
-# Package
-os, flag, strings, strconv, math,
-container list, container ring,
-sort, time, reflec, regexp
-
-## Enable gopls
-cd current project root
-- empty go work
-go work init
-
-- go.work with contains
-go work use ./repo1 ./repo2
 
 ### 1. end
 <!-- SOL 50 -->
@@ -617,32 +580,3 @@ go work use ./repo1 ./repo2
     - main class    : psvm
     - println       : sout
     - 
-
-## Progress Java:
-# Objective: 3,720 minutes
-# Remaining: 3,453
-# Progress: 267
-
-# Jul:
-Fri 21: 104
-Sat 22: 117
-Sun 23: 46
-
-Mon 24: 
-Tue 25: 
-Wed 26: 
-Thu 27: 
-Fri 28: 
-Sat 29: 
-Sun 30: 
-
-Mon 31: 
-
-# Aug:
-Tue 1: 
-Wed 2: 
-Thu 3: 
-Fri 4: 
-Sat 5: 
-Sun 6: 
-
