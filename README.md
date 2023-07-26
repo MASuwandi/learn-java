@@ -12,11 +12,11 @@ Progress: To Do, On Progress, Done
 
 # ---- JAVA Topic / Subject ----: - Progress ------------#
 # -------------------------------------------------------#
-#  1. Dasar                     : To Do        : 32 chap #
+#  1. Dasar                     : Done         : 32 chap #
 #  2. Studi Kasus Dasar:
-#       App Todolist            : To Do        : 23 chap #
-#  3. OOP                       : To Do        : 44 chap #
-#  4. Standard Classes          : To Do        : xx chap #
+#       App Todolist            : Done         : 23 chap #
+#  3. OOP                       : Done         : 44 chap #
+#  4. Standard Classes          : On Progress  : xx chap #
 #  5. Studi Kasus OOP:                                   #
 #       App Todolist            : To Do        : xx chap #
 #  6. Generic                   : To Do        : xx chap #
