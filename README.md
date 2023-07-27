@@ -5,7 +5,6 @@
 
 # Run on Dev env
 
-
 # Notes
 
 Progress: To Do, On Progress, Done
@@ -114,15 +113,19 @@ String[] split()        | Memotong string dengan string value
 <!-- SOL 50 -->
 </details>
 
-### IntelliJ IDEA Guide
+### Error
+if is already define, retype, comment -> uncomment.
+
+### IntelliJ Shortcut Key
 - Soft-wrap     : ⌘ ⇧ A    -> cmd  + shift  + A
 - Reformat Code : ⌘ ⌥ L    -> cmd  + option + L
 - Increase Font : ^ ⇧ .    -> ctrl + shift  + .
 - Terminal      : ⌥ fn f12 -> option + fn + f12
+- Search        : ⇧ x 2    -> shift x 2
 
 
 ### Snippet Trigger
-## Java
+## Java Intellij Snipet
     - main class    : psvm
     - println       : sout
     - 

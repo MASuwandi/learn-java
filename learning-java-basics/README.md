@@ -2,69 +2,16 @@
 ### Running app
 
 # Install Dependency
-- install all dependencies:
-    go get .
-
-- install all dependencies recursively:
-    go get ./...
-    go get -d ./...
-
-... is a special pattern, tells to go down recursively.
-
-- compile file -> generate binary file
-go build filename
-
-- run app
-./filename
 
 # Run on Dev env
-go run filename
-
-# Error not in GOROOT
-old GOPATH, new Go Modules
-- activate old GOPATH
-go env -w GO111MODULE=off
-
-- activate Go Modules
-go env -w GO111MODULE=on
 
 # Notes
-- data type 32 -> 8
-127 to -128
 
 Progress: To Do, On Progress, Done
 
 # ---- JAVA Topic / Subject ----: - Progress ------------#
 # -------------------------------------------------------#
-#  1. Dasar                     : To Do        : 61 chap #
-#  2. Studi Kasus Dasar:
-#       App Todolist            : To Do        :  8 chap #
-#  3. OOP                       : To Do        : 16 chap #
-#  4. Standard Classes          : To Do        : 28 chap #
-#  5. Studi Kasus OOP:                                   #
-#       App Todolist            : To Do        :  9 chap #
-#  6. Generic                   : To Do        : 15 chap #
-#  7. Collection                : To Do        :  8 chap #
-#  8. Lambda                    : To Do        : 29 chap #
-#  9. Apache Maven              : To Do        : 11 chap #
-# 10. Unit Test                 : To Do        : 11 chap #
-# 11. Stream                    : To Do        : 11 chap #
-# 12. Database                  : To Do        : 11 chap #
-# 13. Studi Kasus Database:                              #
-#       App Todolist            : To Do        : 11 chap #
-# 14. Internationalization      : To Do        : 11 chap #
-# 15. Date & Time               : To Do        : 11 chap #
-# 16. Thread                    : To Do        : 11 chap #
-# 17. Reflection                : To Do        : 11 chap #
-# 18. Validation                : To Do        : 11 chap #
-# 19. Logging                   : To Do        : 11 chap #
-# 20. Lombok                    : To Do        : 11 chap #
-# 21. Resilience 4J             : To Do        : 11 chap #
-# 22. Input Output              : To Do        : 11 chap #
-# 23. JSON                      : To Do        : 11 chap #
-# 24. CSV                       : To Do        : 11 chap #
-# 25. Web Servlet               : To Do        : 11 chap #
-#     GRaphQL                   : To Do                  #
+#  1. Dasar                     : Done         : 32 chap #
 # -------------------------------------------------------#
 
 
@@ -482,50 +429,25 @@ go work use ./repo1 ./repo2
 <!-- SOL 50 -->
 </details>
 
-### IntelliJ IDEA Guide
-- Soft-wrap     : ⌘ ⇧ A    -> cmd  + shift  + A
-- Reformat Code : ⌘ ⌥ L    -> cmd  + option + L
-- Increase Font : ^ ⇧ .    -> ctrl + shift  + .
-- Terminal      : ⌥ fn f12 -> option + fn + f12
-
 # Tip of the Day
 1. Improve code with context actions
 Press   ⌥   ↩ Return   in the editor to fix a highlighted error or warning, improve, or optimize a code construct. For some intention actions, you can open a preview or an action description by pressing   F1   (View | Quick Documentation).
 
 2. 
 
+### Error
+if is already define, retype, comment -> uncomment.
+
+### IntelliJ Shortcut Key
+- Soft-wrap     : ⌘ ⇧ A    -> cmd  + shift  + A
+- Reformat Code : ⌘ ⌥ L    -> cmd  + option + L
+- Increase Font : ^ ⇧ .    -> ctrl + shift  + .
+- Terminal      : ⌥ fn f12 -> option + fn + f12
+- Search        : ⇧ x 2    -> shift x 2
+
 
 ### Snippet Trigger
-## Java
+## Java Intellij Snipet
     - main class    : psvm
     - println       : sout
     - 
-
-## Progress Java:
-# Objective: 3,720 minutes
-# Remaining: 3500
-# Progress: 220
-
-# Jul:
-Fri 21: 104
-Sat 22: 116
-Sun 23: 
-
-Mon 24: 
-Tue 25: 
-Wed 26: 
-Thu 27: 
-Fri 28: 
-Sat 29: 
-Sun 30: 
-
-Mon 31: 
-
-# Aug:
-Tue 1: 
-Wed 2: 
-Thu 3: 
-Fri 4: 
-Sat 5: 
-Sun 6: 
-

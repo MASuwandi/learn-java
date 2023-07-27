@@ -3,39 +3,15 @@
 
 # Install Dependency
 
+# Run on Dev env
+
+# Notes
+
 Progress: To Do, On Progress, Done
 
 # ---- JAVA Topic / Subject ----: - Progress ------------#
 # -------------------------------------------------------#
-#  1. Dasar                     : Done         : 61 chap #
-#  2. Studi Kasus Dasar:
-#       App Todolist            : Done         :  8 chap #
-#  3. OOP                       : Done         : 16 chap #
-#  4. Standard Classes          : On Progress  : 28 chap #
-#  5. Studi Kasus OOP:                                   #
-#       App Todolist            : To Do        :  9 chap #
-#  6. Generic                   : To Do        : 15 chap #
-#  7. Collection                : To Do        :  8 chap #
-#  8. Lambda                    : To Do        : 29 chap #
-#  9. Apache Maven              : To Do        : 11 chap #
-# 10. Unit Test                 : To Do        : 11 chap #
-# 11. Stream                    : To Do        : 11 chap #
-# 12. Database                  : To Do        : 11 chap #
-# 13. Studi Kasus Database:                              #
-#       App Todolist            : To Do        : 11 chap #
-# 14. Internationalization      : To Do        : 11 chap #
-# 15. Date & Time               : To Do        : 11 chap #
-# 16. Thread                    : To Do        : 11 chap #
-# 17. Reflection                : To Do        : 11 chap #
-# 18. Validation                : To Do        : 11 chap #
-# 19. Logging                   : To Do        : 11 chap #
-# 20. Lombok                    : To Do        : 11 chap #
-# 21. Resilience 4J             : To Do        : 11 chap #
-# 22. Input Output              : To Do        : 11 chap #
-# 23. JSON                      : To Do        : 11 chap #
-# 24. CSV                       : To Do        : 11 chap #
-# 25. Web Servlet               : To Do        : 11 chap #
-#     GRaphQL                   : To Do                  #
+#  4. Standard Classes          : On Progress  : xx chap #
 # -------------------------------------------------------#
 
 
@@ -108,7 +84,8 @@ StringBuilder: tidak bisa paralel akses.
 ## Number Class
 - Semua number class yg bukan primitif memiliki parent class yg sama, yaitu class Number.
 - Class Number memiliki banyak method yg bisa digunakan untuk mengkonversi ke tipe Number lain.
-- Hal ini memudahkan kita untuk mengkonversi obje
+- Hal ini memudahkan kita untuk mengkonversi object Number dari satu tipe ke tipe number lainnya.
+- docs.oracle.com/en/java/javase/14/docs/api/java.base/java/lang/Number.html
 
 *Implementation file /classes  : StringApp.
 
@@ -189,14 +166,16 @@ StringBuilder: tidak bisa paralel akses.
 - Stream
 
 ### Noted Feature:
-
 -
 
 ### 1. end
 <!-- SOL 50 -->
 </details>
 
-### IntelliJ IDEA Guide
+### Error
+if is already define, retype, comment -> uncomment.
+
+### IntelliJ Shortcut Key
 - Soft-wrap     : ⌘ ⇧ A    -> cmd  + shift  + A
 - Reformat Code : ⌘ ⌥ L    -> cmd  + option + L
 - Increase Font : ^ ⇧ .    -> ctrl + shift  + .
@@ -204,36 +183,7 @@ StringBuilder: tidak bisa paralel akses.
 
 
 ### Snippet Trigger
-## Java
+## Java Intellij Snipet
     - main class    : psvm
     - println       : sout
     - 
-
-## Progress Java:
-# Objective: 3,720 minutes
-# Remaining: 3,453
-# Progress: 267
-
-# Jul:
-Fri 21: 104
-Sat 22: 117
-Sun 23: 46
-
-Mon 24: 
-Tue 25: 
-Wed 26: 
-Thu 27: 
-Fri 28: 
-Sat 29: 
-Sun 30: 
-
-Mon 31: 
-
-# Aug:
-Tue 1: 
-Wed 2: 
-Thu 3: 
-Fri 4: 
-Sat 5: 
-Sun 6: 
-
