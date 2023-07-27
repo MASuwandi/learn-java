@@ -2,35 +2,12 @@
 ### Running app
 
 # Install Dependency
-- install all dependencies:
-    go get .
-
-- install all dependencies recursively:
-    go get ./...
-    go get -d ./...
-
-... is a special pattern, tells to go down recursively.
-
-- compile file -> generate binary file
-go build filename
-
-- run app
-./filename
 
 # Run on Dev env
-go run filename
 
 # Error not in GOROOT
-old GOPATH, new Go Modules
-- activate old GOPATH
-go env -w GO111MODULE=off
-
-- activate Go Modules
-go env -w GO111MODULE=on
 
 # Notes
-- data type 32 -> 8
-127 to -128
 
 Progress: To Do, On Progress, Done
 
@@ -92,6 +69,7 @@ Progress: To Do, On Progress, Done
 - Setiap Object selalu dibuat dari Class.
 - Dan sebuah Class bisa membuat Object tanpa batas.
 
+
 # Class dan Object:
 - Object created from blueprint / class.
 - Object is independent, no relation with other object.
@@ -101,14 +79,20 @@ Progress: To Do, On Progress, Done
 - Untuk membuat class, kita bisa menggunakan kata kunci class.
 - Penamaan class biasa menggunakaan format Pascal Case.
 
+*Implementation file: Person.
+
 # Membuat Object
 - Object adalah hasil instansiasi dari sebuah class.
 - Untuk membuat object kita bisa menggunakan kata kuci new, dan diikutin dengan nama Class dan kurung().
+
+*Implementation file: Person, PersonApp.
 
 ## Field
 - Field / Properties / Attributes adalah data yg bisa kita sisipkan di dalam Object.
 - Namun sebelum kita bisa memasukkan data di fields, kita harus mendeklarasikan data apa saja yg dimiliki object tersebut di dalam deklarasi class-nya.
 - Membuat field sama seperti membuat variable, namun ditempatkan di block class.
+
+*Implementation file: Person.
 
 # Manipulasi Field
 - Field yg ada di object, bisa kita manipulasi. Tergantung final atau bukan.
@@ -116,11 +100,15 @@ Progress: To Do, On Progress, Done
 - Untuk memanipulasi data field, sama seperti cara pada variable.
 - Untuk mengakses field, kita butuh kata kunci . (titik) setelah nama object dan diikuti nama field nya.
 
+*Implementation file: Person, PersonApp.
+
 ## Method
 - Selain menambahkan field, kita juga bisa menambahkan method ke object.
 - Caranya dengan mendeklarasikan method itu di dalam block class.
 - Sama seperti di method yg ada di dalam block class.
 - Untuk mengakses method itu, kita bisa menggunakan tanda titik (.) dan diikuti dengan nama method nya. Sama seperti mengakses field.
+
+*Implementation file: Person, PersonApp.
 
 # access
 - person1.walk;
@@ -133,6 +121,8 @@ Progress: To Do, On Progress, Done
 - Di dalam class Java, kita bisa membuat constructor, constructor adalah method yg akan dipanggil saat pertama kali Object dibuat.
 - Mirip seperti di method, kita bisa memberi parameter pada constructor.
 - Nama constructor harus sama dengan nama class, dan tidak membutuhkan kata kunci void atau return value.
+
+*Implementation file: Person, PersonApp.
 
 # Constructor Overloading
 - Sama seperti di method, di constructor pun kita bisa melakukan overloading.
@@ -153,6 +143,8 @@ Person(String paramName) {
 - Ini biasa terjadi seperti kita membuat nama parameter di method sama dengan nama field di class.
 - Saat terjadi variable shadowing, maka secara otomatis variable di scope diatanya tidak bisa diakses.
 
+*Implementation file: Person, PersonApp.
+
 ## this Keyword
 - Saat kita membuat kode di dalam block constructor atau method di dalam class, kita bisa menggunakan kata kunci this untuk mengakses object saat ini.
 - Misal kadang kita butuh mengakses sebuah field yg namanya sama dengan parameter method, hal ini tidak bisa dilakukan jika langsung menyebut nama field, kita bisa mengakses nama field tersebut dengan kata kunci this.
@@ -161,12 +153,16 @@ Person(String paramName) {
 
 - Object saat ini: instance yg telah dibuat.
 
+*Implementation file: Person, Computer.
+
 ## Inheritance
 - Inheritance adalah kemamppuan untuk menurunkan sebuah class ke class lain.
 - Dalam artian, kita bisa membuat class Parent dan class Child.
 - Class Child, hanya bisa punya satu class Parent, namun satu class Parent bisa punya banyak class Child.
 - Saat sebuah class diturunkan, maka semua field dan method yg ada di class Parent, secara otomatis akan dimiliki oleh class Child.
 - Untuk melakukan pewarisan, di class child, kita harus menggunakan kata kunci extends lalu diikuti dengan nama class parent nya.
+
+*Implementation file: Manager, VicePresident, ManagerApp.
 
 ## Method Overriding
 - Method overriding adalah kemampuan mendeklarasikan ulang method di child class, yg sudah ada di parent class.
@@ -175,6 +171,8 @@ Person(String paramName) {
 # Method Overloading
 - Method overloading adalah kemampuan mendeklarasikan ulang method dengan nama yg sama dengan tipe parameter, atau jumlah parameter yg berbeda di class yg sama.
 
+*Implementation file: Manager, VicePresident, ManagerApp.
+
 ## super Keyword
 - Kadang kita ingin mengakses method yg terdapat di class parent yg sudah terlanjur kita override di class child.
 - Untuk mengakses method milik class parent, kita bisa menggunakan kata kunci super.
@@ -182,6 +180,8 @@ Person(String paramName) {
 - Tidak hanya method, field milik parent class pun bisa kita akses menggunakan kata kunci super.
 
 ex: super.getCorner(), super.name
+
+*Implementation file: Shape, ShapeApp.
 
 ## Super Constructor
 - Tidak hanya untuk mengakses method atau field yg ada di parent class, kata kunci super juga bisa digunakan untuk mengakses constructor.
@@ -194,6 +194,8 @@ Person(String name) {
     super(null);
 }
 
+*Implementation file: Manager, VicePresident, ManagerApp.
+
 ## Object Class
 - Di Java, setiap class yg kita buat secara otomatis adalah turunan dari class Object.
 - Walaupun tidak secara langsung kita eksplisit menyebutkan extends Object, tapi secara otomatis Java akan membuat class kita extends Object.
@@ -203,10 +205,21 @@ Person(String name) {
 ex:
 - instance.toString()
 
+shift x 2 -> class -> Object
+
+*Implementation file: Object.java, ManagerApp.
+
 ## Polymorphism
 - Polymorphism berasal dari bahasa Yunani yg berarti banyak bentuk.
 - Dalam OOP, Polymorphism adalah kemampuan sebuah object berubah bentuk menjadi bentuk lain.
 - Polymorphism erat hubungannya dengan Inheritance.
+
+ex: Instance Object yg di generate dari class yg berbeda bisa menggunakan satu tipe variable class yg sama, yaitu tipe dari ancestor class tersebut.
+
+# Method Polymorphism
+- dengan begitu bisa menggunakan static method yg mempunyai tipe parameter yg sama.
+
+*Implementation file: Employee, Manager, VicePresident, PolymorphismApp.
 
 Notes:
 shift click all the class file ->
@@ -222,11 +235,13 @@ C. Manager
 C. VicePresident
 
 
-## Type Check dan Casts
+## Type Check dan Casts (Conversion)
 - Sebelumnya kita sudah tau cara melakukan konversi tipe data (casts) di tipe data primitif.
 - Casts juga bisa digunakan untuk tipe data bukan primitif.
 - Namun agar aman, sebelum melakukan casts, pastikan kita melakukan type check (pengecekan tipe data), dengan menggunakan kata kunci instanceof.
 - Hasil opertator instanceof adalah boolean, true jika tipe data sesuai, false jika tidak sesuai.
+
+*Implementation file: PolymorphismApp.
 
 ## Variable Hiding
 - Variable hiding merupakan masalah yg terjadi ketika kita membuat nama field sama di class child dengan nama field di class parent.
@@ -235,6 +250,8 @@ C. VicePresident
 - Yang membedakan variable hiding dan method overriding adalah ketika sebuah object di casts.
 - Saat object di casts, method akan tetap mengakses method overriding, namun variable akan mengakses variable yg ada di class nya.
 
+*Implementation file: Parent, ParentApp.
+
 ## Package
 - Saat kita membuat aplikasi, bisa dipastikan kita akan banyak sekali membuat class.
 - Jika class terlalu banyak, kadang akan menyulitkan kita untuk mencari atau mengklassifikasikan jenis-jenis class.
@@ -242,10 +259,22 @@ C. VicePresident
 - Sama seperti folder / dir, package juga bisa nested, kita bisa menggunakan tanda titik (.) untuk membuat nested package.
 - Ketika kita menyimpan class di dalam package, maka diatas file Java nya, kita wajib menyebutkan nama package nya.
 
+ex: src/programmer/zaman/now
+        /application
+        /data
+        /util
+
+package programmer.zaman.now.data;
+
+*Implementation file: Product.
+
 ## Access Modifier
 - Access Modifier adalah kemampuan membuat class, field, method dan constructor dapat diakses dari mana saja.
 - Sebelumnya teman-teman sudah melihat 2 access modifier, yaitu public dan default (no-modifier).
 - Sekarang kita akan bahas access modifier lainnya.
+
+*Implementation file /data          : Product, ProductApp.
+                     /application   : Application
 
 # Access Level
 Modifier    Class   Package  Subclass    World
@@ -265,9 +294,12 @@ private       Y        N        N          N
 
 ex:
 - import class Product inside package data;
-import programmer.zaman.now.data.Product;
+import data.main.Product;
 - import all public class inside package data;
 import programmer.zaman.now.data.*;
+
+*Implementation file /data          : Product.
+                     /application   : Application
 
 # Default Import
 - Secara default, semua class yg ada di package java.lang sudah auto import, jadi kita tidak perlu melakukan import secara manual.
@@ -281,11 +313,17 @@ import programmer.zaman.now.data.*;
 
 ex: public abstract class Location {}
 
+*Implementation file /data          : Location, City.
+                     /application   : AbstractClassApp.
+
 ## Abstract Method
 - Saat kita membuat class yg abstract, kita bisa membuat abstract method juga di dalam class abstract tersebut.
 - Saat kita membuat sebuah abstract method, kita tidak boleh membuat block method untuk method tersebut.
 - Artinya, abstract method wajib di ovrride di class child.
 - Abstract method tidak boleh memiliki access modifier private.
+
+*Implementation file /data          : Animal, Cat.
+                     /application   : AbstractMethodApp.
 
 ## Getter dan Setter
 # Encapsulation
@@ -298,6 +336,9 @@ sum: melindungi data sensitif, dengan menggunakan access modifier keyword "priva
 
 advantages:
 - bisa menambahkan validasi di setter agar data diupdate dengan value yg valid
+
+*Implementation file /data          : Category.
+                     /application   : CategoryApp.
 
 # Getter dan Setter
 - Di Java, proses encapsulation sudah dibuat standarisasinya, dimana kita bisa menggunakan Getter dan Setter method.
@@ -328,6 +369,9 @@ click + shift / cmd
 - all method inside interface has public and abstract type.
 - sebagai kontrak.
 
+*Implementation file /data          : Car, R8.
+                     /application   : CarApp.
+
 ## Interface Inheritance
 - Sebelumnya kita sudah tahu kalau di Java, child class hanya bisa punya 1 class parent.
 - Namun berbeda dengan interface, sebuah child class bisa implement lebih dari 1 interface.
@@ -335,6 +379,9 @@ click + shift / cmd
 
 - class has multiple interface.
 - interface has multiple parent or inherit other interface.
+
+*Implementation file /data          : HashBrand, Car, IsMaintenance, R8.
+                     /application   : CarApp.
 
 ## Default Method
 - Sebelumnya kita tahu bahwa di interface, kita tidak bisa membuat method konkrit yg memiliki block method.
@@ -345,12 +392,18 @@ click + shift / cmd
 
 - sehingga semua pengguna interface tidak wajib menambahkan method / tidak error ketika kita menambahkan method di interface.
 
+*Implementation file /data          : Car, R8, Bus.
+                     /application   : CarApp.
+
 ## toString() Method
 - toString() adalah method yg terdapat di class Object.
 - Method ini biasanya digunakan untuk merepresentasikan object dalam bentuk String.
 - Secara default, toString() ini akan menghasilkan:
     -       namaclass + @ +hashCode
 - Namun kita bisa mengubahnya jika kita mau, agar object yg kita buat lebih mudah dibaca.
+
+*Implementation file /data          : Product.
+                     /application   : ProductApp.
 
 ## equals() Method
 - Hal yg agak membingungkan di Java adalah, cara membandingkan object.
@@ -363,10 +416,16 @@ ctrl + N ->
 equals and hashcode ->
 select template
 
+*Implementation file /data          : Product.
+                     /application   : EqualsApp, ProductApp.
+
 ## HashCode Method
 - Method hashCode adalah method representasi integer object kita, mirip toString yg merupakan representasi String, hashCode adalah representasi integer.
 - HashCode sangat bermanfaat untuk membuat struktur data unique seperti HashMap, Set, dll, karena cukup menggunakan hashCode method untuk mendapatkan identitas unique object kita.
 - Secara default hashCode akan mengembalikan nilai integer sesuai data di memory, namun kita bisa mengoverride nya jika kita ingin.
+
+*Implementation file /data          : Product.
+                     /application   : ProductApp.
 
 # Kontrak HashCode Method
 Tidak mudah meng-override method hashCode, karena ada kontraknya:
@@ -381,16 +440,23 @@ Tidak mudah meng-override method hashCode, karena ada kontraknya:
 - Final pun bisa digunakan di class, diaman jika kita menggunakan kata kunci final sebelum class, maka kita menan dakan bahwa class tersebut tidak bisa diwariskan lagi.
 - Secara otomatis semua class child nya akan error.
 
+*Implementation file /data          : SocialMedia.
+
 ## Final Method
 - Kata kunci final juga bisa digunakan di Method.
 - Jika sebuah method kita tambahkan kata kunci final, maka artinya method tersebut tidak bisa di override lagi di class child nya.
 - Ini sangat cocok jika kita ingin mengunci implementasi dari sebuah method agar tidak bisa diubah lagi oleh class child nya.
+
+*Implementation file /data          : SocialMedia.
 
 ## Inner Class
 - Di Java, kita bisa membuat class di dalam class, atau disebut dengan Inner Class.
 - Salah satu kasus kita membuat inner class biasanya ketika kita butuh membuat beberapa class yg saling berhubungan, dimana sebuah class tidak bisa dibuat tanpa class lain.
 - Misal kita perlu membuat class Employee, dimana membutuhkan class Company, maka kita bisa membuat class Employee sebagain inner class Company.
 - Cara membuat inner class, cukup membuatnya di dalam blok class outer class nya.
+
+*Implementation file /data          : Company.
+                     /application   : NestedApp.
 
 # Mengakses Outer Class
 - Keuntungan saat kita membuat inner class adalah, kemampuan untuk mengakses outer class nya.
@@ -399,19 +465,233 @@ Tidak mudah meng-override method hashCode, karena ada kontraknya:
 - Dan untuk mengakses super class outer class nya, kita bisa menggunakan nama class outer nya diikuti dengan kata kunci super, misal Company.super.
 
 ## Anonymous Class
-## static Keyword
+- Anonymous class atau class tanpa nama.
+- Adalah kemampuan mendeklarasikan class, sekaligus meng-instansiasi object-nya secara langsung.
+- Anonymous class sebenarnya termasuk inner class, dimana outer class nya adalah tempat dimana kita membuat anonymous class tersebut.
+- Anonymous class sangat cocok ketika kita berhadapan dengan kasus membuat implementasi interface atau abstract class sederhana, tanpa harus membuat implementasi class nya.
+
+*Implementation file /data          : HelloWorld.
+                     /application   : HelloWorldApp.
+
+## Static Keyword
+- Sebelumnya kita sudah sering melihat kata kunci static, namun belum pernah kita bahas.
+- Dengan menggunakan kata kunci static, kita bisa membuat field, method atau class bisa diakses langsung tanpa melalui object nya.
+- Perlu diingat, static hanya bisa mengakses static lainnya.
+
+# Static Dapat Digunakan di:
+- Field, atau disebut class variable, artinya field tersebut bisa diakses langsung tanpa membuat object terlebih dahulu.
+- Method, atau disebut class method, artinya method tersebut bisa diakses langsung tanpa membuat object terlebih dahulu.
+- Block, static block akan otomatis dieksekusi ketika sebuah class di load.
+- Inner Class, artinya inner class tersebut bisa diakses secara langsung tanpa harus membuat object outer ckass terlebih dahulu. Static pada inner class menyebabkan kita tidak bisa mengakses lagi object outer class nya.
+
+ex: Field, Method, Block, Inner Class.
+use for helper.
+
+*Implementation file /data          : Constant, Country, Application.
+                     /util          : MathUtil.
+                     /application   : StaticApp.
+
+# Static Import
+import static
+
 ## Record Class
+# Java 14 - Experimental
+- Fitur ini masih versi preview dan belum stabil di versi Java 14, namun kita sudah bisa mencobanya.
+- Tapi perlu diingat, bahwa karena fitur ini masih experimental, artinya tidak ada jaminan di versi Java mendatang, fitur ini akan tetap ada, bisa saja dihilangkan.
+
+# Record Class
+- Kadang kita sering membuat class, hanya untuk class yg berisikan data. Hanya berisi getter, equals, hashCode, dan toString method.
+- Record class digunakan untuk mempermudah pembuatan jenis class tersebut.
+- Saat kita membuat record class, secara otomatis Java akan membuatkan getter, equals, hashCode dan toString method secara otomatis, dan juga constructor secara otomatis.
+- Saat membuat record class, secara otomatis kita akan meng-extends class java.lang.Record, yg artinya kita tidak bisa extends class lain. Namun kita tetap bisa meng-implement interface.
+
+- immutable
+- no method setter
+- value can't be change
+
+*Implementation file /data          : LoginRequest.
+                     /application   : RecordApp.
+
+# Record Class Constructor
+- Secara default, constructor di record class akan dibuat secara otomatis, sesuai dengan definisi record class parameter.
+- Namun jika kita ingin melakukan sesuatu di constructor  tersebut, kita bisa membuat compact constructor, yaitu constructor tanpa tanda ().
+- Selain itu, kita juga bisa melakukan constructor overloading, namun ada syaratnya, yaitu constructor overloading nya harus tetap memanggil constructor utama yg secara otomatis dibuatkan di record class.
+
+- can't extends
+- interface allowed
 
 ## Enum Class
+- Saat kita membuat aplikasi, kadang kita akan bertemu dengan jenis-jenis data yg nilainya terbatas.
+- Misal, gender, ada male dan female, atau tipe customer, ada standard, premium atau vip, dll.
+- Dalam kasus seperti ini, kita bisa menggunakan enum class, yaitu class yg berisikan nilai terbatas yg sudah ditentukan.
+- Saat membuat enum class, secara otomatis dia akan meng-extends class java.lang.Enum, oleh karena itu class enum tidak bisa extends class lain, namun masih tetap bisa implements interface.
+
+-Class yg berisikan nilai terbatas yg sudah ditentukan.
+
+*Implementation file /data          : Level, Customer.
+                     /application   : EnumApp.
+
+# Enum Members
+- Sama seperti class biasanya, di class enum pun kita bisa menambahkan members (field, method dan constructor).
+- Khusus constructor, kita tidak bisa membuat public constructor, karena memang tujuan enum bukan untuk di instansiasi secara bebas.
+
+*Implementation file /data        : Level.
+                     /application : EnumApp.
 
 ## Exception
+- Saat kita membuat aplikasi, kita tidak akan terhindar dengan yg namanya error.
+- Di Java, error direpresentasikan dengan istilah exception, dan semua direpresentasikan dalam bentuk class exception.
+- Kita bisa menggunakan class exception sendiri, atau menggunakan yg sudah disediakan oleh Java.
+- Jika kita ingin membuat exception, maka kita harus membuat class yg extends class Throwable atau turunan-turunannya.
+
+- Create package error / exception
+- you can check Throwable
+
+*Implementation file /error       : ValidationException.
+                     /util        : ValidationUtil.
+                     /application : ValidationApp.
+
+# Membuat Exception
+- Exception biasanya terjadi di method, ketika kita membuat exception di sebuah method, maka method tersebut harus ditandai dengan kata kunci throw diikuti dengan class exception nya.
+- Jika method tersebut bisa menimbulkan lebih dari satu class exception.
+- Di dalam kode program kita, untuk membuat exception kita cukup menggunakan kata kunci throw, diikutin dengan object exception nya.
+
+# Try Catch
+- Saat kita memanggil sebuah function yg bisa menyebabkan exception, maka kita wajib menggunakan try-catch expression di Java.
+- Ini gunanya agar kita bisa menangkap exception yg terjadi, karena jika tidak ditangkap, lalu terjadi exception, maka secara otomatis program kita akan berhenti.
+- Cara menggunakan try-catch expression di Java sangat mudah, di block try, kita tinggal panggil method yg bisa menyebabkan exception dan di block catch, kita bisa melakukan sesuatu jika terjadi exception.
+
+# Multiple Try Catch
+1. catch() {} catch() {}
+2. catch(type1 | type2 err) {}
+
+# Finally Keyword
+- Dalam try-catch, kita bisa menambahkan block finally.
+- Block finally ini adalah block dimana akan selalu dieksekusi baik terjadi exception ataupun tidak.
+- Ini sangat cocok ketika kita ingin melakukan sesuatu, tidak peduli sukses ataupun gagal, misal di block try kita ingin membaca file, di block catch kita akan tangkap jika terjadi error, dan di block finally error ataupun sukses membaca file, kita wajib menutup koneksi ke file tersebut, biar tidak menggantung data di memory.
+
+# Jenis Exception
+Secara garis besar, di Java, exception dibagi 3 jenis.
+- Checked Exception, yaitu exception yg wajib di try catch, seperti yg sudah kita bahas.
+- Runtime Exception, dan
+- Error
 
 ## Runtime Exception
+- Runtime exception adalah jenis exception yg tidak wajib di tangkap menggunakan try catch.
+- Kompiler Java tidak akan protes walaupun kita tidak menggunakan try catch ketika kita memanggil method yg bisa menyebabkan runtime exception.
+- Untuk membuat class runtime exception, kita wajib mengextends class RuntimeException.
+- Ada banyak di Java yg merupakan runtime exception, seperti NullPointerException, IllegalArgumentException, dll.
+
+Notes:
+- Walaupun runtime exception tidak wajib di try-catch, tapi disarankan tetap melakukan try-catch.
+- Karena jika terjadi runtime exception, juga bisa membuat program berhenti.
+
+*Implementation file /error       : BlankException.
+                     /util        : ValidationUtil.
+                     /application : ValidationApp.
+
+# Centralize Error Handler (Best Practice)
+- minimize try catch usage in every code.
+
 ## Error
+- Error adalah jenis exception yg terakhir.
+- Error adalah sebuah class di Java, yg tidak direkomendasikan untuk di try-catch.
+- Biasanya error terjadi ketika ada masalah serius, dan sangat tidak direkomendasikan untuk di try-catch.
+- Artinya, direkomendasikan untuk mematikan aplikasi.
+- Contoh, misal jika diawal aplikasi kita tidak bisa terkoneksi ke database, direkomendasikan untuk membuat exception jenis Error, dan menghentikan aplikasi.
+
+*Implementation file /error       : DatabaseError.
+                     /application : DatabaseApp.
+
 ## StackTraceElement Class
+- Throwable memiliki method yg bernama getStackTrace(), dimana menghasilkan Array dari StackTraceElement object.
+- StackTraceElement berisikan informasi tentang, class, file bahkan baris lokasi terjadinya error.
+- Class StackTraceElement ini sangat penting untuk menelusuri lokasi kejadian error yg terjadi.
+- Cara yg paling mudah, kita bisa memanggil method printStackTrace() class Throwable, untuk memprint ke console detail error StackTraceElement nya.
+
+*Implementation file /data          : HelloWorld.
+                     /application   : StackTraceApp.
+
+# Multiple StackTraceElement
+
 ## Try with Resource
+- Di Java 7, terdapat fitur baru bernama try with resource.
+- Try with resource adalah sebuah mekanisme agar kita lebih mudah menggunakan resource (yg wajib di close) dalam block try.
+- Jika kita ingin menggunakan fitur ini, kita wajib menggunakan interface AutoCloseable.
+
+# Code: Manual Close Resource
+search BufferedReader class ->
+BufferedReader extends Reader ->
+Reader implements Closeable ->
+Closeable extends AutoCloseable ->
+close();
+
+*Implementation file /application : ReadApp.
+                     /root        : README-PZN.md
+
+# Code: Try with Resource
+- try(Object of AutoCloseable descendant)
+- no need finally, and manual close()
+
 ## Annotation
-## Reflection
+- Annotation adalah menambahkan metadata ke kode program yg kita buat.
+- Tidak semua orang membutuhkan Annotation, biasanya Annotation digunakan saat kita ingin membuat library / framework.
+- Annotation sendiri bisa diakses menggunakan Reflection, yg akan kita bahas nanti.
+- Untuk membuat Annotation, kita bisa menggunakan kata kunci @interface.
+- Annotation hanya bisa memiliki method dengan tipe data sederhana, dan bisa memiliki default value.
+
+# Attribute Annotation
+Attribute      | Keterangan
+@Target        | Memberitahu Annotation bisa digunakan di mana? Class, method, field, dll.
+@Retention     | Memberitahu Annotation apakah disimpan di hasil kompilasi, dan apakah bisa dibaca oleh reflection?
+
+# Code: Membuat Annotation
+*Implementation file /annotation  : Fancy.
+
+# Code: Menggunakan Annotation
+*Implementation file /application  : AbstractMethodApp.
+                     /data          : Car, Level.
+
+rule base on Fancy @Target ElementType
+
+# Predefined Annotation
+Java juga sudah memiliki annotation bawaan, seperti:
+- @Override, untuk menandai bahwa method yg meng-override method parent class nya.
+- @Deprecated, untuk menandai bahwa method tersebut tidak direkomendasikan lagi untuk digunakan.
+- @FunctionalInterface, untuk menandai bahwa class tersebut bisa dibuat sebagai lambda expression.
+- dll.
+
+ex:
+@Override
+public String getMessage() { return super.getMessage(); }
+
+@Deprecated
+public class BlankException extends RuntimeException {}
+- will make class has strike mark
+
+## Reflection (Intro) - Full Content in Section 17
+- Reflection adalah kemampuan melihat struktur aplikasi kita pada saat berjalan.
+- Reflection biasanya sangat berguna saat kita ingin membuat library ataupun framework, sehingga bisa meng-otomatisasi pekerjaan.
+- Untuk mengakses reflection class dari sebuah object, kita bisa menggunakan method getClass() atau NamaClass.class
+
+*Implementation file /annotation  : NotBlank.
+                     /util        : ValidationUtil
+                     /data        : CreateUserRequest
+                     /application : ReflectionApp
+
+Required:
+# Code: Annotation di Field
+add annotation @NotBlank
+
+# Code: Validation menggunakan Reflection
+add validation 
+
+Advantages:
+- can create validation framework
+
+Perlu Diperhatikan
+- Reflection adalah materi yg sangat panjang.
+- Oleh karena itu materi Java Reflection akan dibuatkan course terpisah.
 
 ### Materi Selanjutnya
 - Object Oriented Programming
@@ -424,31 +704,21 @@ Tidak mudah meng-override method hashCode, karena ada kontraknya:
 - Stream
 
 ### Noted Feature:
-
-- 
-
-# Package
-os, flag, strings, strconv, math,
-container list, container ring,
-sort, time, reflec, regexp
-
-## Enable gopls
-cd current project root
-- empty go work
-go work init
-
-- go.work with contains
-go work use ./repo1 ./repo2
+-
 
 ### 3. end
 <!-- SOL 50 -->
 </details>
+
+### Error
+if is already define, retype, comment -> uncomment.
 
 ### IntelliJ IDEA Guide
 - Soft-wrap     : ⌘ ⇧ A    -> cmd  + shift  + A
 - Reformat Code : ⌘ ⌥ L    -> cmd  + option + L
 - Increase Font : ^ ⇧ .    -> ctrl + shift  + .
 - Terminal      : ⌥ fn f12 -> option + fn + f12
+- Search        : ⇧ x 2    -> shift x 2
 
 
 ### Snippet Trigger

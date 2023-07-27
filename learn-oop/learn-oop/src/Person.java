@@ -9,8 +9,8 @@ class Person {
 
     // Constructor
     Person(String paramName, String paramAddress) {
-        name = paramName;
-        address = paramAddress;
+        this.name = paramName;
+        this.address = paramAddress;
     }
 
     // Constructor Overloading
