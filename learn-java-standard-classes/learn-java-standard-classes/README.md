@@ -82,35 +82,113 @@ StringBuilder: tidak bisa paralel akses.
 *Implementation file /classes  : StringTokenizerApp.
 
 ## Number Class
-- Semua number class yg bukan primitif memiliki parent class yg sama, yaitu class Number.
+- Semua number class yg non-primitif memiliki parent class yg sama, yaitu class Number.
 - Class Number memiliki banyak method yg bisa digunakan untuk mengkonversi ke tipe Number lain.
 - Hal ini memudahkan kita untuk mengkonversi object Number dari satu tipe ke tipe number lainnya.
 - docs.oracle.com/en/java/javase/14/docs/api/java.base/java/lang/Number.html
 
-*Implementation file /classes  : StringApp.
+# Method di Number Class
+Method               |   Keterangan
+- - - - - - - - - - - - - - - - - - - - - - - - - - - -
+byte byteValue()     | Mengubah menjadi tipe byte
+double doubleValue() | Mengubah menjadi tipe double
+float floatValue()   | Mengubah menjadi tipe float
+int intValue()       | Mengubah menjadi int value
+long longValue()     | Mengubah menjadi long value
+short shortValue()   | Mengubah menjadi short value
+
+*Implementation file /classes  : NumberApp.
+
+# Konversi String ke Number
+- Long, Integer, Short dan Byte memiliki static method untuk melakukan konversi dari String ke number.
+- parseXxx(string) digunakan untuk mengkonversi dari string ke tipe data number primitif.
+- valueOf(string) digunakan untuk mengkonversi dari string ke tipe data number non-primitif.
+- Method ini akan throw NumberFormatException jika ternyata gagal melakukan konversi String ke number.
+
+ex: parseLong(string)
 
 ## Math Class
-- 
+- Class Math merupakan class utilities yg berisikan banyak sekali static method untuk operasi numerik, seperti trigonometric, logarithm, akar pangkat, dll.
+- docs.oracle.com/en/java/javase/14/docs/api/java.base/java/lang/Math.html
 
-*Implementation file /classes  : StringApp.
+# Method di Math Class
+Method               |   Keterangan
+- - - - - - - - - - - - - - - - - - - - - - - - - - - -
+double cos(double)   | Menghitung cos di trigonometric
+double sin(double)   | Menghitung sin di trigonometric
+double tan(double)   | Menghitung tan di trigonometric
+mix(number1, number2)| Mengambil nilai terkecil
+max(number1, number2)| Mengambil nilai terbesar
+...dll
+
+*Implementation file /classes  : MathApp.
 
 ## BigNumber Class
-- 
+- Jika kita ada kebutuhan untuk menggunakan angka yg besar sehingga melebihi kapasitas Long dan Double, di Java sudah disediakan class untuk handle data besar tersebut.
+- BigInteger adalah class untuk handle tipe data Integer, dan
+- BigDecimal adalah class untuk handle tipe data floating point
 
-*Implementation file /classes  : StringApp.
+- docs.oracle.com/en/java/javase/14/docs/api/java.base/java/math/BigInteger.html
+- docs.oracle.com/en/java/javase/14/docs/api/java.base/java/math/BigDecimal.html
+
+# Method di BigInteger & BigDecimal
+Method     | Keterangan
+- - - - - - - - - - - - -
+add        | +
+subtract   | -
+multiply   | *
+divide     | /
+mod        | %
+...dll
+
+*Implementation file /classes  : BigNumberApp.
 
 ## Scanner Class
-- 
+- Scanner sebenarnya bagian dari Java IO (Input Output), dan ini akan dibahas di materi terpisah.
+- Namun sekarang kita akan bahas sekilas tentang class Scanner.
+- Class Scanner hadir sejak Java 5
+- Class Scanner adalah class yg bisa digunakan untuk membaca input, entah dari file, console, dll.
+- Class Scanner ini cocok untuk dijadikan object untuk membaca input user saat kita belajar membuat program Java menggunakan console / terminal.
+- docs.oracle.com/en/java/javese/14/docs/api/java.base/java/util/Scanner.html
 
-*Implementation file /classes  : StringApp.
+# Method di Scanner Class
+Method          | Keterangan
+- - - - - - - - - - - - -
+nextLine()      | Membaca string
+nextInt()       | Membaca int
+nextLong()      | Membaca long
+nextBoolean()   | Membaca boolean
+...dll
+
+*Implementation file /classes  : ScannerApp.
 
 ## Date dan Calendar Class
-- 
+- Tiap bahasa pemrograman biasanya memiliki representasi tanggal, di Java juga sama, ada class Date & Calender yg bisa kita gunakan sebagai representasi tanggal.
+- Sebenarnya di Java 8 sudah ada cara manipulasi tanggal yg baru menggunakan Java Date Time API, namun itu akan kita bahas di course terpisah.
+- Sekarang kita akan fokus menggunakan class Date dan Calender.
 
-*Implementation file /classes  : StringApp.
+# Hubungan Date dan Calendar
+- Class Date adalah class representasi tanggal sampai presisi milisecond.
+- Namun di class Date sudah banyak method-method yg di deprecated, sehingga untuk memanipulasi date tanggal, kita sekarang harus melakukan kombinasi antara class Date dan Calendar.
+- Sederhananya Date untuk representasi tanggal, dan Calendar untuk memanipulasi tanggal.
+
+- docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Date.html
+- docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Calendar.html
+
+- a lot of function Deprecated
+- 
+# Code : Menggunakan Date
+- milisecond format input
+- planetcalc
+
+# Code: Menggunakan Calendar
+
+*Implementation file /classes  : DateApp.
 
 ## System Class
-- 
+- Class System adalah class yg berisikan banyak utility static method di Java, contohnya sebelum kita sudah sering menggunakan method printLn milik field out di class System.
+
+- docs.oracle.com/en/java/javase/14/docs/api/java.base/java/lang/System.html
 
 *Implementation file /classes  : StringApp.
 
@@ -166,7 +244,7 @@ StringBuilder: tidak bisa paralel akses.
 - Stream
 
 ### Noted Feature:
--
+- can check method or class detail in structure
 
 ### 1. end
 <!-- SOL 50 -->
