@@ -272,17 +272,37 @@ don't store app config in the source code, save external in file form.
 
 - docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Properties.html
 
-*Implementation file /classes  : PropertiesApp.
+# case:
+1. properties file not located:
+   - properties location: /project/file.properties
+2. success
+    - properties location: /file.properties
+
+*Implementation file /classes  : PropertiesApp. 
 
 ## Arrays Class
-- 
+- Arrays class adalah class yg berisikan static method yg bisa kita gunakan untuk memanipulasi data array, seperti pencarian dan pengurutan.
 
-*Implementation file /classes  : App.
+- docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Arrays.html
+
+Method                     | Keterangan
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+binarySearch(array, value) | Mencari value di array
+copyOf(...)                | Menyalin data array
+equals(array1, array2)     | Membandingkan array1 dan array2
+sort(array)                | Mengurutkan array
+toString(array)            | Mengembalikan representasi string
+...dll
+
+*Implementation file /classes  : ArraysApp.
 
 ## Regular Expression
-- 
+- Regular Expression atau disingkat regex adalah cara untuk melakukan pola pencarian.
+- Biasanya dilakukan untuk pencarian dalam data String.
+- Secara sederhana, kita mungkin sudah sering melakukan pencarian text, entah di text editor atau di aplikasi word.
+- Regex adalah pencarian yg lebih advanced dibandingkan pencarian text biasanya, misal kita ingin mencari semua kata yg mengandung diawali huruf a dan diakhiri huruf a, dll.
 
-*Implementation file /classes  : App.
+*Implementation file /classes  : RegexApp.
 
 
 ### Materi Selanjutnya

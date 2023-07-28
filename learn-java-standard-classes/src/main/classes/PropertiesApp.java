@@ -2,6 +2,7 @@ package main.classes;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -26,5 +27,20 @@ public class PropertiesApp {
         catch (IOException exception) {
             System.out.println("Fail load data from file: " + exception.getMessage());
         }
+
+        try {
+            // Save properties
+            Properties properties = new Properties();
+            properties.put("name.first", "Bob");
+            properties.put("name.last", "Wick");
+
+            properties.store(new FileOutputStream("name.properties"), "Config Name");
+        } catch (FileNotFoundException exception) {
+            System.out.println("Fail create file properties: " + exception.getMessage());
+        }
+        catch (IOException exception) {
+            System.out.println("Fail save properties: " + exception.getMessage());
+        }
+
     }
 }
