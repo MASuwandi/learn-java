@@ -190,47 +190,99 @@ nextBoolean()   | Membaca boolean
 
 - docs.oracle.com/en/java/javase/14/docs/api/java.base/java/lang/System.html
 
-*Implementation file /classes  : StringApp.
+# Method di System Class
+Method                  | Keterangan
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+String getenv(key)      | Mendapatkan environtment variable sistem operasi
+void exit(status)       | Menghentikan program Java
+long currentTimeMilis() | Mendapatkan waktu saat ini dalam milisecond
+long nanoTime()         | Mendapatkan waktu saat ini dalam nanosecond
+void gc()               | Menjalankan Java garbage collection
+...dll
+
+check env : run env
+add env through Intellij : Recent Configuration -> edit config -> choose file -> environtment variables -> +
+
+*Implementation file /classes  : SystemApp.
 
 ## Runtime Class
-- 
+- Ketika aplikasi Java kita berjalan, kita bisa melihat informasi environment tempat aplikasi Java berjalan.
+- Informasi itu terdapat di class Runtime.
+- Class Runtime tidak bisa dibuat, secara otomatis Java akan membuat single object. Kita bisa mengakses object tersebut menggunakan static method getRuntime() milik class Runtime.
 
-*Implementation file /classes  : StringApp.
+- docs.oracle.com/en/java/14/docs/api/java.base/java/lang/Runtime.html
+
+# Method di Runtime Class
+Method                    | Keterangan
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+int availableProcessors() | Mendapatkan jumlah core cpu
+long freeMemory()         | Mendapatkan jumlah memory bebas di JVM
+long totalMemory()        | Mendapatkan jumlah total memory di JVM
+long maxMemory()          | Mendapatkan jumlah max memory di JVM
+void gc()                 | Menjalankan garbage collector untuk menghilangkan data di memory yg sudah tidak terpakai.
+
+*Implementation file /classes  : RuntimeApp.
 
 ## UUID Class
-- 
+- Saat membuat aplikasi, kadang kita ada kasus ingin membuat data unique, misal untuk kebutuhan data primary key misalnya.
+- Java menyediakan sebuah class UUID atau singkatan dari Universally Unique Identifier.
+- UUID adalah format standard untuk membuat unique value yg telah terjamin.
 
-*Implementation file /classes  : StringApp.
+- docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/UUID.html
+- ietf.org/rfc/rfc4122.txt
+
+*Implementation file /classes  : UUIDApp.
 
 ## Base64 Class
-- 
+- Sejak Java 8, Java sudah menyediakan class untuk melakukan encoding base64.
+- Buat programmer web pasti tahu tentang base64, yaitu encoding yg bisa digunakan untuk mengubah binary data ke text yg aman.
+- Aman disini bukan dari sisi security, tapi aman dari kesalahan parsing.
 
-*Implementation file /classes  : StringApp.
+- docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Base64.html
+- ietf.org/rfc/rfc4648.txt
+
+*Implementation file /classes  : Base64App.
 
 ## Objects Class
-- 
+- Awas jangan tertukar, ini class Objects, bukan Object.
+- Objects adalah class utility yg berisikan banyak static method yg bisa kita gunakan untuk operasi object atau melakukan pengecekan sebelum operasi nya dilakukan.
 
-*Implementation file /classes  : StringApp.
+- docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Objects.html
+
+*Implementation file /classes  : ObjectsApp.
 
 ## Random Class
-- 
+- Random class adalah class yg bisa kita gunakan untuk men-generate Random number.
 
-*Implementation file /classes  : StringApp.
+docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Random.html
+
+*Implementation file /classes  : RandomApp.
 
 ## Properties Class
-- 
+# Properties File
+- Kebanyakan aplikasi Java akan menyimpan konfigurasi file dalam bentuk properties file.
+- Properties file adalah file yg berisi key value yg dipisahkan dengan tanda sama dengan (=).
+- Properties file bisa kita gunakan untuk menyimpan konfigurasi aplikasi kita.
 
-*Implementation file /classes  : StringApp.
+# Best Practice
+don't store app config in the source code, save external in file form.
+
+# Properties Class
+- Properties Class adalah class yg bisa kita gunakan untuk mengambil atau menyimpan informasi ke file properties.
+
+- docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Properties.html
+
+*Implementation file /classes  : PropertiesApp.
 
 ## Arrays Class
 - 
 
-*Implementation file /classes  : StringApp.
+*Implementation file /classes  : App.
 
 ## Regular Expression
 - 
 
-*Implementation file /classes  : StringApp.
+*Implementation file /classes  : App.
 
 
 ### Materi Selanjutnya

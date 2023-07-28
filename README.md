@@ -44,7 +44,7 @@ Progress: To Do, On Progress, Done
 
 
 <details>
-<summary>### 1. Go Dasar</summary>
+<summary>### 4. Java Standard Classes</summary>
 <br>
 <!-- EOL 245 -->
 
