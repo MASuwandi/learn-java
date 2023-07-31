@@ -11,7 +11,7 @@ Progress: To Do, On Progress, Done
 
 # ---- JAVA Topic / Subject ----: - Progress ------------#
 # -------------------------------------------------------#
-#  4. Standard Classes          : On Progress  : xx chap #
+#  4. Standard Classes          : Done         : 12 chap #
 # -------------------------------------------------------#
 
 

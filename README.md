@@ -15,7 +15,7 @@ Progress: To Do, On Progress, Done
 #  2. Studi Kasus Dasar:
 #       App Todolist            : Done         : 23 chap #
 #  3. OOP                       : Done         : 44 chap #
-#  4. Standard Classes          : On Progress  : xx chap #
+#  4. Standard Classes          : Done         : 12 chap #
 #  5. Studi Kasus OOP:                                   #
 #       App Todolist            : To Do        : xx chap #
 #  6. Generic                   : To Do        : xx chap #
