@@ -302,6 +302,14 @@ toString(array)            | Mengembalikan representasi string
 - Secara sederhana, kita mungkin sudah sering melakukan pencarian text, entah di text editor atau di aplikasi word.
 - Regex adalah pencarian yg lebih advanced dibandingkan pencarian text biasanya, misal kita ingin mencari semua kata yg mengandung diawali huruf a dan diakhiri huruf a, dll.
 
+# Regex Package
+- Java sudah menyediakan package java.util.regex yg berisikan utilitas untuk melakukan proses regular expression.
+- Secara garis besar terdapat 2 class yg dapat kita gunakan, yaitu Pattern class dan Matcher class.
+- Pattern class adalah representasi hasil kompilasi dari pola reguler expression yg kita buat.
+- Matcher class adalah engine unruk melakukan pencarian dari pattern yg sudah kita buat.
+
+- docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/regex/Pattern.html
+
 *Implementation file /classes  : RegexApp.
 
 
